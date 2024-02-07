@@ -1,7 +1,7 @@
-export default function NotesSidebar() {
+export default function NotesSidebar({ addNote }) {
   return (
     <div className="notes-sidebar">
-      <button>+ Add Note</button>
+      <button onClick={addNote}>+ Add Note</button>
       <div>//display notes</div>
     </div>
   );
