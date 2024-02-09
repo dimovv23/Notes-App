@@ -1,7 +1,14 @@
 import { MdDeleteSweep } from "react-icons/md";
 import { useRef } from "react";
 
-export default function Note({ content, input = false, onAdd }) {
+export default function Note({
+  content,
+  input = false,
+  onAdd,
+  onDelete,
+  id,
+  date,
+}) {
   const userInput = useRef();
 
   function handleSave() {
@@ -26,8 +33,8 @@ export default function Note({ content, input = false, onAdd }) {
           {" "}
           <p>{content}</p>
           <div className="note-footer">
-            <span>//date</span>
-            <button>
+            <span>{date}</span>
+            <button onClick={() => onDelete(id)}>
               <MdDeleteSweep className="delete-icon" size="1.3rem" />
             </button>
           </div>

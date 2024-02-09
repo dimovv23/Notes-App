@@ -1,7 +1,6 @@
 .header {
   max-width: 2400px;
   margin: 0 3rem;
-  border: solid red 1px;
 }
 
 .notes-list {
@@ -9,7 +8,6 @@
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   margin: 0 3rem;
-  border: solid red 1px;
   height: fit-content;
 }
 
@@ -66,4 +64,5 @@
 .note-footer button {
   background: transparent;
   border: none;
+  cursor: pointer;
 }
