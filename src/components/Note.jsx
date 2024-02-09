@@ -1,5 +1,5 @@
 import { MdDeleteSweep } from "react-icons/md";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 export default function Note({
   content,
@@ -10,6 +10,13 @@ export default function Note({
   date,
 }) {
   const userInput = useRef();
+  const [charCount, setCharCount] = useState(0);
+  const charLimit = 200;
+
+  function handleInputChange(event) {
+    const userInputValue = event.target.value;
+    setCharCount(userInputValue.length);
+  }
 
   function handleSave() {
     const userContent = userInput.current.value;
@@ -24,6 +31,7 @@ export default function Note({
     });
 
     userInput.current.value = "";
+    setCharCount(0);
   }
 
   return (
@@ -50,9 +58,13 @@ export default function Note({
             cols="32"
             rows="10"
             placeholder="Start typping to add a note..."
+            maxLength={charLimit}
+            onChange={handleInputChange}
           ></textarea>
           <div className="note-footer">
-            <span>//brChar</span>
+            <span>
+              {charLimit - charCount}/{charLimit}
+            </span>
             <button onClick={handleSave}>Save</button>
           </div>
         </div>

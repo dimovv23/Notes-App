@@ -28,7 +28,7 @@
   justify-content: space-between;
   min-height: 280px;
   margin: 1rem 0;
-  background-color: #7cc6fe;
+  background-color: #f4faff;
   border-radius: 20px;
   padding: 0 0.75rem;
 }
@@ -55,10 +55,12 @@
 .new-note div button {
   background-color: #f4faff;
   border-radius: 10px;
+  padding: 0.25rem 0.5rem;
+  font-size: 1.2rem;
 }
 
 .new-note div button:hover {
-  background-color: #8789c0;
+  background-color: #7cc6fe;
   color: #f4faff;
 }
 
