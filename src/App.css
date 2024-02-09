@@ -5,22 +5,62 @@
 }
 
 .notes-list {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 2400px;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   margin: 0 3rem;
   border: solid red 1px;
   height: fit-content;
 }
 
 .note {
-  max-width: 300px;
-  margin: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 280px;
+  margin: 1rem 0;
+  background-color: #7cc6fe;
+  border-radius: 20px;
+  padding: 0 0.75rem;
+}
+
+.new-note {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 280px;
+  margin: 1rem 0;
+  background-color: #0dfdb1;
+  border-radius: 20px;
+  padding: 0 0.75rem;
+}
+
+.new-note textarea {
+  resize: none;
+  border: none;
+  margin: 1rem 0;
+  background-color: transparent;
+  font-size: 1rem;
+}
+
+.new-note div button {
+  background-color: #f4faff;
+  border-radius: 10px;
+}
+
+.new-note div button:hover {
+  background-color: #8789c0;
+  color: #f4faff;
+}
+
+.new-note textarea:focus {
+  outline: 0;
 }
 
 .note-footer {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 0.5rem;
 }
 
 .note-footer button {
