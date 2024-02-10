@@ -8,12 +8,7 @@ function App() {
   const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <div
-      style={{
-        height: "100vh",
-      }}
-      className={darkMode ? "dark" : "frost"}
-    >
+    <div className={darkMode ? "dark" : "frost"}>
       <div className="container">
         <Header
           setSearchData={setSearchData}
