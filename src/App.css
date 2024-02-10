@@ -127,3 +127,26 @@
   border: none;
   cursor: pointer;
 }
+
+.modal {
+  background-color: #f4faff;
+  border: none;
+  border-radius: 20px;
+}
+
+.modal form {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal form button {
+  background-color: #08090a;
+  color: #02de99;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.modal::backdrop {
+  background: rgba(0, 0, 0, 0.3);
+}

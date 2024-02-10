@@ -1,5 +1,6 @@
 import { MdDeleteSweep } from "react-icons/md";
 import { useRef, useState } from "react";
+import Modal from "./Modal";
 
 export default function Note({
   content,
@@ -12,6 +13,7 @@ export default function Note({
   const userInput = useRef();
   const [charCount, setCharCount] = useState(0);
   const charLimit = 200;
+  const modal = useRef();
 
   function handleInputChange(event) {
     const userInputValue = event.target.value;
@@ -23,6 +25,7 @@ export default function Note({
 
     if (userContent.trim() === "") {
       //TODO: Modal for error message
+      modal.current.open();
       return;
     }
 
@@ -36,6 +39,10 @@ export default function Note({
 
   return (
     <div>
+      <Modal ref={modal} buttonCaption={"Close"}>
+        <h2>Oops...</h2>
+        <p>Looks like forgot to enter text for your note.</p>
+      </Modal>
       {!input && (
         <div className="note">
           {" "}
