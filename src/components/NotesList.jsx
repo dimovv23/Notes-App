@@ -1,10 +1,14 @@
 import { useState } from "react";
 import Note from "./Note";
 
-export default function NotesList() {
+export default function NotesList({ searchData }) {
   const [notesState, setNotesState] = useState({
     notes: [],
   });
+
+  const filteredNotes = notesState.notes.filter((note) =>
+    note.noteContent.toLowerCase().includes(searchData.toLowerCase())
+  );
 
   function handleDelete(id) {
     setNotesState((prevState) => {
@@ -34,7 +38,7 @@ export default function NotesList() {
   return (
     <div className="notes-list">
       <Note input={true} onAdd={handleAddNote}></Note>
-      {notesState.notes.map((note) => (
+      {filteredNotes.map((note) => (
         <Note
           key={note.id}
           content={note.noteContent}

@@ -1,17 +1,57 @@
-.container {
+.frost {
+  background-color: #f4faff;
+}
+
+.frost div div h1 {
+  color: #08090a;
+}
+
+.dark {
   background-color: #08090a;
-  height: 100vh;
+}
+
+.dark div div h1 {
+  color: #f4faff;
 }
 
 .header {
   max-width: 2400px;
   margin: 0 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header h1 {
+  font-size: 3rem;
   margin: 0;
-  padding: 0.75rem;
-  color: #f4faff;
+  padding: 0 3rem;
+  color: #08090a;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  flex: 1;
+  background-color: #f2f2f8;
+  padding: 0.5rem;
+  border-radius: 20px;
+  border: solid #0dfdb1;
+  margin-right: 0.5rem;
+}
+
+.search input {
+  flex: 1;
+  border-radius: 20px;
+  padding: 0.25rem 0.5rem;
+  margin-left: 0.25rem;
+  background-color: #f2f2f8;
+  border: none;
+}
+
+.search input:focus {
+  outline: 0;
 }
 
 .notes-list {
@@ -28,9 +68,14 @@
   justify-content: space-between;
   min-height: 280px;
   margin: 1rem 0;
-  background-color: #f4faff;
+  background-color: #8789c0;
   border-radius: 20px;
   padding: 0 0.75rem;
+  border: solid #6c6eb2;
+}
+
+.note p {
+  white-space: pre-wrap;
 }
 
 .new-note {
@@ -42,6 +87,7 @@
   background-color: #0dfdb1;
   border-radius: 20px;
   padding: 0 0.75rem;
+  border: solid #02de99;
 }
 
 .new-note textarea {
@@ -60,7 +106,7 @@
 }
 
 .new-note div button:hover {
-  background-color: #7cc6fe;
+  background-color: #8789c0;
   color: #f4faff;
 }
 
