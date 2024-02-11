@@ -23,7 +23,6 @@ export default function Header({ setSearchData, handleToggle, currentMode }) {
           backgroundColor: "transparent",
           margin: "0.5rem",
           borderRadius: "10px",
-          border: "none",
         }}
       >
         {currentMode && <MdLightMode size={"1.6rem"} color="#f4faff" />}
